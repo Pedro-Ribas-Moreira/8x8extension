@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Page Div Text Finder",
+  "version": "1.0",
+  "description": "Find and alert text within a specific div on a page.",
+  "permissions": ["activeTab"],
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://cloud8.8x8.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
