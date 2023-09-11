@@ -15,7 +15,7 @@ function createModal(message) {
   const modalContent = document.createElement("div");
   modalContent.style.backgroundColor = "white";
   modalContent.style.width = "400px";
-  modalContent.style.height = "400px";
+  modalContent.style.height = "auto";
   modalContent.style.padding = "20px";
   modalContent.style.boxShadow = "0px 2px 10px rgba(0, 0, 0, 0.1)";
   modalContent.style.textAlign = "center";
@@ -28,10 +28,24 @@ function createModal(message) {
   // Create the image
   const image = document.createElement("img");
   image.src =
-    "https://prepaypower-my.sharepoint.com/personal/pedro_moreira_prepaypower_ie/_layouts/15/embed.aspx?UniqueId=c9a195db-0dba-4b3b-b344-8727569c8d48"; // Replace with the actual image URL
+    "https://raw.githubusercontent.com/Pedro-Ribas-Moreira/8x8extension/main/systemOne.png";
   image.style.maxWidth = "100%";
-  image.style.height = "100%";
+  image.style.height = "auto";
   modalContent.appendChild(image);
+
+  const imagetwo = document.createElement("img");
+  imagetwo.src =
+    "https://raw.githubusercontent.com/Pedro-Ribas-Moreira/8x8extension/main/systemOne.png";
+  imagetwo.style.maxWidth = "100%";
+  imagetwo.style.height = "auto";
+  modalContent.appendChild(imagetwo);
+
+  const imageThree = document.createElement("img");
+  imageThree.src =
+    "https://raw.githubusercontent.com/Pedro-Ribas-Moreira/8x8extension/main/systemOne.png";
+  imageThree.style.maxWidth = "100%";
+  imageThree.style.height = "auto";
+  modalContent.appendChild(imageThree);
 
   // Create the paragraph
   const paragraph = document.createElement("p");
