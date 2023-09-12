@@ -22,8 +22,13 @@ function createModal(message) {
 
   // Create the title
   const title = document.createElement("h2");
-  title.textContent = "Check your connection status";
+  title.textContent = "You are not connected!";
   modalContent.appendChild(title);
+
+  const paragraph = document.createElement("p");
+  paragraph.style = "margin-top: 10px";
+  paragraph.textContent = "In the top right corner, click on the settings icon";
+  modalContent.appendChild(paragraph);
 
   // Create the image
   const image = document.createElement("img");
@@ -31,26 +36,42 @@ function createModal(message) {
     "https://raw.githubusercontent.com/Pedro-Ribas-Moreira/8x8extension/main/systemOne.png";
   image.style.maxWidth = "100%";
   image.style.height = "auto";
+  image.style.border = "1px solid black";
   modalContent.appendChild(image);
+
+  const paragraphTwo = document.createElement("p");
+  paragraphTwo.style = "margin-top: 10px";
+
+  paragraphTwo.textContent =
+    "Click on the button that says 'not connected', then click again in the button to connect";
+  modalContent.appendChild(paragraphTwo);
 
   const imagetwo = document.createElement("img");
   imagetwo.src =
-    "https://raw.githubusercontent.com/Pedro-Ribas-Moreira/8x8extension/main/systemOne.png";
+    "https://raw.githubusercontent.com/Pedro-Ribas-Moreira/8x8extension/main/systemTwo.png";
   imagetwo.style.maxWidth = "100%";
   imagetwo.style.height = "auto";
+  imagetwo.style.border = "1px solid black";
+
   modalContent.appendChild(imagetwo);
+
+  const paragraphThree = document.createElement("p");
+  paragraphThree.style = "margin-top: 10px";
+
+  paragraphThree.textContent =
+    "Wait for the connection to be established, then return to the 'Agent' tab";
+  modalContent.appendChild(paragraphThree);
 
   const imageThree = document.createElement("img");
   imageThree.src =
-    "https://raw.githubusercontent.com/Pedro-Ribas-Moreira/8x8extension/main/systemOne.png";
+    "https://raw.githubusercontent.com/Pedro-Ribas-Moreira/8x8extension/main/systemThree.png";
   imageThree.style.maxWidth = "100%";
   imageThree.style.height = "auto";
+  imageThree.style.border = "1px solid black";
+
   modalContent.appendChild(imageThree);
 
   // Create the paragraph
-  const paragraph = document.createElement("p");
-  paragraph.textContent = message;
-  modalContent.appendChild(paragraph);
 
   // Create the OK button
   const okButton = document.createElement("button");
@@ -83,9 +104,9 @@ function findAndAlertText() {
     if (document.querySelector(".disconnected").classList.contains("ng-hide")) {
       alert("Good Work");
     } else {
-      createModal("You are not connected to the in2tel integration");
+      createModal();
     }
-  }, 10000); // 10000 milliseconds (10 seconds)
+  }, 5000); // 10000 milliseconds (10 seconds)
 }
 
 window.onload = findAndAlertText;
