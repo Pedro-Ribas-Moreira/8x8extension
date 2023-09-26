@@ -48,7 +48,7 @@ function createModal(message) {
 
   const imagetwo = document.createElement("img");
   imagetwo.src =
-    "https://raw.githubusercontent.com/Pedro-Ribas-Moreira/8x8extension/main/systemTwo.png";
+    "https://raw.githubusercontent.com/Pedro-Ribas-Moreira/8x8extension/main/systemThree.png";
   imagetwo.style.maxWidth = "100%";
   imagetwo.style.height = "auto";
   imagetwo.style.border = "1px solid black";
@@ -64,7 +64,7 @@ function createModal(message) {
 
   const imageThree = document.createElement("img");
   imageThree.src =
-    "https://raw.githubusercontent.com/Pedro-Ribas-Moreira/8x8extension/main/systemThree.png";
+    "https://raw.githubusercontent.com/Pedro-Ribas-Moreira/8x8extension/main/systemTwo.png";
   imageThree.style.maxWidth = "100%";
   imageThree.style.height = "auto";
   imageThree.style.border = "1px solid black";
@@ -102,7 +102,6 @@ function createModal(message) {
 function findAndAlertText() {
   setTimeout(() => {
     if (document.querySelector(".disconnected").classList.contains("ng-hide")) {
-      alert("Good Work");
     } else {
       createModal();
     }

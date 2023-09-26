@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "Page Div Text Finder",
+  "name": "8x8 connection checker",
   "version": "1.0",
-  "description": "Find and alert text within a specific div on a page.",
-  "permissions": ["activeTab"],
+  "description": "This extension checks if the connection is Up, otherwise show an alert with guide to connect.",
+  "permissions": ["activeTab", "https://cloud8.8x8.com/*"],
 
   "action": {
     "default_popup": "popup.html",
